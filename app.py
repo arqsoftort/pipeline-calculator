@@ -14,7 +14,7 @@ def index():
 @app.route('/pipeline-route/service/<service_point_id>', methods=['POST'])
 def calculate_pipeline(service_point_id):
     sections = random_sections()
-    return jsonify({'servicePointId': service_point_id, 'sections': sections}), 200
+    return jsonify({'sections': sections}), 200
 
 
 @app.errorhandler(404)
